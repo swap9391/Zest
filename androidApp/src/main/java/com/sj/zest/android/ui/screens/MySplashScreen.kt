@@ -19,8 +19,6 @@ import com.sj.zest.android.theme.textstyle.MyTextStyle
 import com.sj.zest.android.ui.components.button.MyMainButton
 import com.sj.zest.android.ui.components.imageview.MyImageView
 import com.sj.zest.android.ui.components.textView.MyTextView
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.flow
 
 @Preview
 @Composable
@@ -67,7 +65,7 @@ fun MySplashScreen() {
             MyMainButton(buttonTitle = "Get Started",
                 isIconVisible = true,
                 iconId = R.drawable.ic_right_arrow,
-                modifier = ModifierO
+                modifier = Modifier
                     .constrainAs(btnGetStarted) {
                         top.linkTo(textSubTitle.bottom, margin = 26.dp)
                         start.linkTo(parent.start)
