@@ -67,7 +67,7 @@ fun MySplashScreen() {
             MyMainButton(buttonTitle = "Get Started",
                 isIconVisible = true,
                 iconId = R.drawable.ic_right_arrow,
-                modifier = Modifier
+                modifier = ModifierO
                     .constrainAs(btnGetStarted) {
                         top.linkTo(textSubTitle.bottom, margin = 26.dp)
                         start.linkTo(parent.start)
