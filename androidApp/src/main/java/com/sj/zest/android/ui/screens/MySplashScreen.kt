@@ -7,12 +7,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.navigation.NavHostController
 import com.sj.zest.android.R
 import com.sj.zest.android.theme.ColorLightBlackText
 import com.sj.zest.android.theme.textstyle.MyTextStyle
@@ -22,7 +24,7 @@ import com.sj.zest.android.ui.components.textView.MyTextView
 
 @Preview
 @Composable
-fun MySplashScreen() {
+fun MySplashScreen(navController: NavHostController? = null) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -72,6 +74,21 @@ fun MySplashScreen() {
                     }
                     .width(180.dp)
             )
+
+
         }
+
+        /*Text(
+            text = "Zest", // Your app name
+            style = TextStyle(fontSize = 48.sp, color = Color.Black) // Customize the styling
+        )*/
+        // You can add a logo or other branding elements here
+    }
+
+    LaunchedEffect(key1 = true) {
+        //delay(2000) // Simulate loading time (adjust as needed)
+        /*navController?.navigate("main_screen") {
+            // popUpTo("splash_screen") { inclusive = true } // Prevent going back to splash screen
+        }*/
     }
 }
